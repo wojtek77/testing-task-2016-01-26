@@ -24,21 +24,21 @@
             <div class="form-group {{ $errors->has('engine_capacity') ? 'has-error' : ''}}">
                 {!! Form::label('engine_capacity', 'Engine Capacity: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::number('engine_capacity', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('engine_capacity', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('engine_capacity', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('mileage_counter') ? 'has-error' : ''}}">
                 {!! Form::label('mileage_counter', 'Mileage Counter: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::number('mileage_counter', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('mileage_counter', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('mileage_counter', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('last_oil_change') ? 'has-error' : ''}}">
                 {!! Form::label('last_oil_change', 'Last Oil Change: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::date('last_oil_change', null, ['class' => 'form-control']) !!}
+                    {!! Form::date('last_oil_change', \Carbon\Carbon::now(), ['class' => 'form-control']) !!}
                     {!! $errors->first('last_oil_change', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
