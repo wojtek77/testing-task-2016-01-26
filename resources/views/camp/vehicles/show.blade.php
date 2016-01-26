@@ -17,5 +17,23 @@
             </tbody>    
         </table>
     </div>
+    
+    <h1>Revision</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Field name</th> <th>Old value</th><th>New value</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($vehicle->revisionHistory as $history )
+                    <tr>
+                        <td>{{ $history->fieldName() }}</td> <td> {{ $history->oldValue() }} </td><td> {{ $history->newValue() }} </td>
+                    </tr>
+                @endforeach
+            </tbody>    
+        </table>
+    </div>
 
 @endsection
