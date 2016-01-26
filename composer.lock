@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ee50dacb6533e3a91302d6d2889dd331",
-    "content-hash": "37cc38441147697c268c9eec4d95f958",
+    "hash": "0a7f76caf571d31153861d985cc74326",
+    "content-hash": "53e89efe858182a87c314e4e5f348a7f",
     "packages": [
         {
             "name": "appzcoder/crud-generator",
@@ -1919,6 +1919,54 @@
                 "dump"
             ],
             "time": "2016-01-07 11:12:32"
+        },
+        {
+            "name": "venturecraft/revisionable",
+            "version": "1.26.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VentureCraft/revisionable.git",
+                "reference": "7a3d5304de6c10d43cfb0d9ebe0bbdbb6e5b82ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/VentureCraft/revisionable/zipball/7a3d5304de6c10d43cfb0d9ebe0bbdbb6e5b82ee",
+                "reference": "7a3d5304de6c10d43cfb0d9ebe0bbdbb6e5b82ee",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~4.0|~5.0|~5.1",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/migrations"
+                ],
+                "psr-0": {
+                    "Venturecraft\\Revisionable": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Duell",
+                    "email": "me@chrisduell.com"
+                }
+            ],
+            "description": "Keep a revision history for your models without thinking, created as a package for use with Laravel",
+            "homepage": "http://github.com/venturecraft/revisionable",
+            "keywords": [
+                "ardent",
+                "history",
+                "laravel",
+                "model",
+                "revision"
+            ],
+            "time": "2016-01-13 12:14:05"
         },
         {
             "name": "vlucas/phpdotenv",
