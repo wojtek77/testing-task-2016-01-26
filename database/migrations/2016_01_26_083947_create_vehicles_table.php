@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 
 class CreateVehiclesTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -12,18 +13,16 @@ class CreateVehiclesTable extends Migration
      */
     public function up()
     {
-        
-            Schema::create('vehicles', function(Blueprint $table) {
-                $table->increments('id');
-                $table->string('name');
-$table->string('registration_number');
-$table->decimal('engine_capacity');
-$table->decimal('mileage_counter');
-$table->date('last_oil_change');
+        Schema::create('vehicles', function(Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('registration_number', 7);
+            $table->decimal('engine_capacity');
+            $table->decimal('mileage_counter');
+            $table->date('last_oil_change');
 
-                $table->timestamps();
-            });
-            
+            $table->timestamps();
+        });
     }
 
     /**
@@ -35,5 +34,4 @@ $table->date('last_oil_change');
     {
         Schema::drop('vehicles');
     }
-
 }
