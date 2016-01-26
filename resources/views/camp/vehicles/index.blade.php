@@ -7,7 +7,13 @@
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>S.No</th><th>Name</th><th>Registration Number</th><th>Engine Capacity</th><th>Actions</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Registration Number</th>
+                    <th>Engine Capacity</th>
+                    <th>Mileage Counter</th>
+                    <th>Last Oil Change</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -15,8 +21,11 @@
             @foreach($vehicles as $item)
                 {{-- */$x++;/* --}}
                 <tr>
-                    <td>{{ $x }}</td>
-                    <td><a href="{{ url('camp/vehicles', $item->id) }}">{{ $item->name }}</a></td><td>{{ $item->registration_number }}</td><td>{{ $item->engine_capacity }}</td>
+                    <td>{{ $item->id }}</td>
+                    <td><a href="{{ url('camp/vehicles', $item->id) }}">{{ $item->name }}</a></td><td>{{ $item->registration_number }}</td>
+                    <td>{{ $item->engine_capacity }}</td>
+                    <td>{{ $item->mileage_counter }}</td>
+                    <td>{{ $item->last_oil_change }}</td>
                     <td>
                         <a href="{{ url('camp/vehicles/' . $item->id . '/edit') }}">
                             <button type="submit" class="btn btn-primary btn-xs">Update</button>
