@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
 
+use App\Http\Requests\VehicleRequest;
+
 class VehiclesController extends Controller
 {
 
@@ -40,7 +42,7 @@ class VehiclesController extends Controller
      *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(VehicleRequest $request)
     {
         
         Vehicle::create($request->all());
@@ -85,7 +87,7 @@ class VehiclesController extends Controller
      *
      * @return Response
      */
-    public function update($id, Request $request)
+    public function update($id, VehicleRequest $request)
     {
         
         $vehicle = Vehicle::findOrFail($id);
