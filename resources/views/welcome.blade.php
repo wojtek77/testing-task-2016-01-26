@@ -40,6 +40,8 @@
             <div class="content">
                 <div class="title">Laravel 5</div>
             </div>
+            
+            <h1><a href="{{ url('camp/vehicles') }}" class="btn btn-primary pull-right btn-sm">Vehicle list</a></h1>
         </div>
     </body>
 </html>
